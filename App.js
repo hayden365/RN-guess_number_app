@@ -98,21 +98,24 @@ export default function App() {
 	}
 
 	return (
-		<LinearGradient
-			colors={[Colors.primary700, Colors.accent500]}
-			style={styles.rootScreen}
-		>
-			<ImageBackground
-				source={require('./assets/images/background.png')}
-				resizeMode="cover"
+		<>
+			<StatusBar style="light" />
+			<LinearGradient
+				colors={[Colors.primary700, Colors.accent500]}
 				style={styles.rootScreen}
-				imageStyle={styles.ImageBackgroundImage}
 			>
-				<SafeAreaView style={styles.rootScreen} onLayout={onLayoutRootView}>
-					{screen}
-				</SafeAreaView>
-			</ImageBackground>
-		</LinearGradient>
+				<ImageBackground
+					source={require('./assets/images/background.png')}
+					resizeMode="cover"
+					style={styles.rootScreen}
+					imageStyle={styles.ImageBackgroundImage}
+				>
+					<SafeAreaView style={styles.rootScreen} onLayout={onLayoutRootView}>
+						{screen}
+					</SafeAreaView>
+				</ImageBackground>
+			</LinearGradient>
+		</>
 	);
 }
 
